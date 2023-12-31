@@ -1,10 +1,8 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/HarshN187/Assignment">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-  <h3 align="center">Wikipedia Loop Checker</h3>
+
+  <h1 align="center">Wikipedia Loop Checker</h1>
 
 </p>
 
@@ -21,8 +19,8 @@
 
 ## About The Project
 
-![ui](./public/Wikipedia(1).png)
-![Result](./public/Wikipedia(result).png)
+![ui](./public/Screenshot_1.png)
+![Result](./public/Screenshot_2.png)
 
 
 The Wikipedia Philosophy Loop Detector is a web application/API designed to explore the well-known phenomenon known as the "Wikipedia Loop." The phenomenon involves navigating through Wikipedia articles by clicking the first link in the main body text and eventually reaching the "Philosophy" page. This project aims to determine the number of requests it takes to reach the "Philosophy" page from a given Wikipedia URL while also displaying the path of visited pages along the way.
