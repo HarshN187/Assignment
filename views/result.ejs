@@ -26,6 +26,7 @@
     <div class="result-container">
       <% if (typeof error !== 'undefined') { %>
       <div class="alert alert-danger" role="alert"><%= error %></div>
+
       <% } else { %>
       <h2 class="mb-4">Path to Philosophy:</h2>
       <p class="lead">Length of the path: <%= path.length %></p>
@@ -39,7 +40,7 @@
         <% } %>
       </ul>
       <% } %>
-      <a href="/" class="btn btn-primary mt-3">Back to Home</a>
+      <a href="/" class="btn btn-primary mt-3">Back</a>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
