@@ -20,12 +20,12 @@
   </head>
   <body class="container mt-5">
     <h1 class="mb-4">Wikipedia Philosophy Path Calculator</h1>
-    <form action="/calculate" method="post">
+    <form action="/getPhilosophyPage" method="post">
       <div class="form-group">
         <label for="url">Enter Wikipedia URL:</label>
-        <input type="text" class="form-control" id="url" name="url" required />
+        <input type="url" class="form-control" id="url" name="url" required />
       </div>
-      <button type="submit" class="btn btn-primary">Calculate</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

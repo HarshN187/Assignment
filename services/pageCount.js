@@ -19,27 +19,32 @@ async function getNextLink(url) {
 }
 
 async function getPathToPhilosophy(startUrl) {
-  const path = [startUrl];
-  let currentUrl = startUrl;
-  console.log("Current url =>" + currentUrl);
-  while (currentUrl !== "https://en.wikipedia.org/wiki/Philosophy") {
-    let nextLink = await getNextLink(currentUrl);
-    nextLink = "https://en.wikipedia.org" + nextLink;
-    console.log(nextLink);
+  try {
+    const path = [startUrl];
+    let currentUrl = startUrl;
 
-    if (!nextLink) {
-      return null;
-    }
+    console.log("Current url =>" + currentUrl);
+    while (currentUrl !== "https://en.wikipedia.org/wiki/Philosophy") {
+      let nextLink = await getNextLink(currentUrl);
+      nextLink = "https://en.wikipedia.org" + nextLink;
+      console.log(nextLink);
 
-    if (path.includes(nextLink)) {
-      console.log("loop detected");
-      return null;
+      if (!nextLink) {
+        return null;
+      }
+
+      if (path.includes(nextLink)) {
+        console.log("loop detected");
+        return null;
+      }
+      path.push(nextLink);
+      currentUrl = nextLink;
     }
-    path.push(nextLink);
-    currentUrl = nextLink;
+    return path;
+  } catch {
+    console.log(err);
+    return null;
   }
-
-  return path;
 }
 
 module.exports = {
