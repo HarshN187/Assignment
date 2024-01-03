@@ -9,11 +9,13 @@ async function getNextLink(url) {
     // Find the first link in the main body text
     const content = $("#mw-content-text");
     const paragraph = content.find("p");
-    const link = paragraph.find("a").first();
+
+    const link = paragraph.find("a[href^='/wiki/']:not(:has(span))").first();
 
     return link.attr("href");
   } catch (err) {
     console.log(err);
+
     return null;
   }
 }
